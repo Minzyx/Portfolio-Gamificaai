@@ -16,7 +16,15 @@
   position: relative;
 }
 
+.gamificacao{
+  right: 5%;
+}
+
 .sobre-gamifica{
+  left: 5%S;
+}
+
+.sobre-gamifica, .gamificacao{
   width: 500px;
   height: 600px;
 
@@ -35,14 +43,14 @@
   left: 5%;
 }
 
-.sobre-gamifica h2{
+.sobre-gamifica h2, .gamificacao h2{
   margin-bottom: 40px;
 
   font-size: 30px;
   text-align: center;
 }
 
-.sobre-gamifica p{
+.sobre-gamifica p, .gamificacao p{
   font-size: 16px;
   text-align: justify;
 
