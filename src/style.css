@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Anta&display=swap');
-  body {
-    background-color: black;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
 
-.container-game{
-  height: 800px;
+body {
+  background-color: black;
+}
+
+.container-game {
   width: 1200px;
+  height: 800px;
 
   margin: 20px auto;
 
@@ -21,12 +22,12 @@
 }
 
 .sobre-gamifica{
-  left: 5%S;
+  left: 5%;
 }
 
 .sobre-gamifica, .gamificacao{
   width: 500px;
-  height: 600px;
+  height: 400px;
 
   padding: 40px;
 
@@ -39,8 +40,7 @@
   font-family: "Anta";
 
   position: absolute;
-  top: 10%;
-  left: 5%;
+  top: 10%;  
 }
 
 .sobre-gamifica h2, .gamificacao h2{
