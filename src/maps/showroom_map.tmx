@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="29" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="10" nextobjectid="1">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="29" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="12" nextobjectid="29">
  <tileset firstgid="1" source="tileset_paredes.tsx"/>
  <tileset firstgid="8285" source="tileset_generic.tsx"/>
  <tileset firstgid="9533" source="tileset_estoque.tsx"/>
@@ -52,6 +52,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup id="11" name="Personagens"/>
  <layer id="2" name="Parede" width="29" height="20">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -196,6 +197,29 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup id="10" name="ObjetosColisores">
+  <object id="3" name="Mesa_Sinuca" x="690.183" y="401.986" width="93.8356" height="74.2642"/>
+  <object id="4" name="mesa_stand_a" x="201.909" y="239.83" width="76.4545" height="41.9205"/>
+  <object id="6" name="cadeira" x="223.5" y="226.25" width="32.625" height="13.6917"/>
+  <object id="7" name="mesa_stand_a" x="425.523" y="239.79" width="76.892" height="42.375"/>
+  <object id="8" name="mesa_stand_a" x="649.409" y="240.131" width="76.4545" height="41.9205"/>
+  <object id="10" name="cadeira" x="448.021" y="227.292" width="32" height="13.9688"/>
+  <object id="11" name="cadeira" x="671.438" y="227" width="33.0625" height="13.0625"/>
+  <object id="12" name="balcao" x="289.324" y="246.682" width="29.1705" height="29.5"/>
+  <object id="13" name="balcao" x="513.324" y="246.159" width="29.1705" height="29.5"/>
+  <object id="14" name="balcao" x="737.354" y="246.765" width="29.1705" height="29.5"/>
+  <object id="15" name="balcao_laura" x="405.333" y="387.333" width="115.667" height="69.6667"/>
+  <object id="16" name="sofa" x="177.667" y="347" width="44.8788" height="68.179"/>
+  <object id="18" name="tv" x="99" y="351.424" width="22.3333" height="56.5758"/>
+  <object id="19" name="jogo" x="97.5" y="435.25" width="33.75" height="44.5"/>
+  <object id="20" name="caixas" x="766.667" y="100.682" width="32.0909" height="51.7879"/>
+  <object id="21" name="estantes" x="388" y="67.0002" width="148.667" height="81.333"/>
+  <object id="22" name="escada" x="588" y="127" width="69.5" height="66"/>
+  <object id="23" name="escada" x="238.583" y="126.333" width="69.5" height="66"/>
+  <object id="26" name="estante" x="805" y="192.334" width="24" height="92.333"/>
+  <object id="27" name="arvore" x="799.227" y="80.4697" width="33.1818" height="62.8788"/>
+  <object id="28" name="arvore" x="95.4091" y="80.3106" width="33.1818" height="62.8788"/>
+ </objectgroup>
  <layer id="9" name="BlocosColisores" width="29" height="20" opacity="0" offsetx="138" offsety="100">
   <properties>
    <property name="solid" type="bool" value="true"/>

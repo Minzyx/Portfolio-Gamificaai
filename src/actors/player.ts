@@ -12,6 +12,7 @@ export class Player extends Actor{
             name: "Jogador",
             color: Color.Red,
             collisionType: CollisionType.Active
+            
 
         })
     }
