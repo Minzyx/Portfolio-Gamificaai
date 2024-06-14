@@ -210,18 +210,18 @@
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="10" name="ObjetosColisores" opacity="0.27">
+ <objectgroup id="10" name="ObjetosColisores">
   <object id="3" name="Mesa_Sinuca" x="690.183" y="401.986" width="93.8356" height="74.2642"/>
-  <object id="4" name="mesa_stand_a" x="201.909" y="239.83" width="76.4545" height="41.9205"/>
+  <object id="4" name="mesa_stand_a" x="201.909" y="239.83" width="76.4545" height="45"/>
   <object id="6" name="cadeira" x="223.5" y="226.25" width="32.625" height="13.6917"/>
-  <object id="7" name="mesa_stand_a" x="425.523" y="239.79" width="76.892" height="42.375"/>
-  <object id="8" name="mesa_stand_a" x="649.409" y="240.131" width="76.4545" height="41.9205"/>
+  <object id="7" name="mesa_stand_a" x="425.523" y="239.79" width="76.892" height="45"/>
+  <object id="8" name="mesa_stand_a" x="649.409" y="240.131" width="76.4545" height="45"/>
   <object id="10" name="cadeira" x="448.021" y="227.292" width="32" height="13.9688"/>
   <object id="11" name="cadeira" x="671.438" y="227" width="33.0625" height="13.0625"/>
   <object id="12" name="balcao" x="289.324" y="246.682" width="29.1705" height="29.5"/>
   <object id="13" name="balcao" x="513.324" y="246.159" width="29.1705" height="29.5"/>
   <object id="14" name="balcao" x="737.354" y="246.765" width="29.1705" height="29.5"/>
-  <object id="15" name="balcao_laura" x="405.333" y="387.333" width="115.667" height="69.6667"/>
+  <object id="15" name="balcao_laura" x="405.333" y="387.333" width="115.667" height="75"/>
   <object id="16" name="sofa" x="177.667" y="347" width="44.8788" height="68.179"/>
   <object id="18" name="tv" x="99" y="351.424" width="22.3333" height="56.5758"/>
   <object id="19" name="jogo" x="97.5" y="435.25" width="33.75" height="44.5"/>
