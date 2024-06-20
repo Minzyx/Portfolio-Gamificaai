@@ -56,3 +56,26 @@ body {
 
   line-height: 2;
 }
+
+.texto-case{
+  width: 500px;
+  height: 400px;
+
+  padding: 40px;
+
+  background-color: #fff;
+
+  border: solid 15px #cf5830;
+  border-radius: 30px;
+
+  color: black;
+  font-family: "Anta";
+
+  position: absolute;
+  top: 10%;  
+  left: 5%;
+}
+
+.texto-case p{
+  font-size: 20px;
+}

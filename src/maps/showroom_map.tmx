@@ -200,24 +200,24 @@
   <object id="30" name="player_spawn" x="463.273" y="494.909">
    <point/>
   </object>
-  <object id="32" name="npc_a" x="239.818" y="230.909">
+  <object id="32" name="npc_a" x="239.427" y="219.996">
    <point/>
   </object>
-  <object id="33" name="npc_b" x="464.625" y="233.25">
+  <object id="33" name="npc_b" x="463.534" y="216.614">
    <point/>
   </object>
-  <object id="34" name="npc_c" x="687.545" y="233.636">
+  <object id="34" name="npc_c" x="687.857" y="216.448">
    <point/>
   </object>
  </objectgroup>
  <objectgroup id="10" name="ObjetosColisores">
   <object id="3" name="Mesa_Sinuca" x="690.183" y="401.986" width="93.8356" height="74.2642"/>
   <object id="4" name="mesa_stand_a" x="201.909" y="239.83" width="76.4545" height="45"/>
-  <object id="6" name="cadeira" x="223.5" y="226.25" width="32.625" height="13.6917"/>
-  <object id="7" name="mesa_stand_b" x="425.523" y="239.79" width="76.892" height="45"/>
+  <object id="6" name="cadeira" x="223.413" y="225.989" width="32.625" height="13.6917"/>
+  <object id="7" name="mesa_stand_b" x="424.735" y="238.911" width="76.892" height="45"/>
   <object id="8" name="mesa_stand_c" x="649.409" y="240.131" width="76.4545" height="45"/>
-  <object id="10" name="cadeira" x="448.021" y="227.292" width="32" height="13.9688"/>
-  <object id="11" name="cadeira" x="671.438" y="227" width="33.0625" height="13.0625"/>
+  <object id="10" name="cadeira" x="448.612" y="224.952" width="32" height="13.9688"/>
+  <object id="11" name="cadeira" x="672.063" y="226.75" width="33.0625" height="13.0625"/>
   <object id="12" name="balcao" x="289.324" y="246.682" width="29.1705" height="29.5"/>
   <object id="13" name="balcao" x="513.324" y="246.159" width="29.1705" height="29.5"/>
   <object id="14" name="balcao" x="737.354" y="246.765" width="29.1705" height="29.5"/>

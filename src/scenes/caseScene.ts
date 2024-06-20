@@ -1,62 +1,100 @@
-import { Actor, Color, Engine, FadeInOut, Scene, SceneActivationContext, Transition, vec } from "excalibur";
+import { Actor, Color, Engine, FadeInOut, Keys, Scene, SceneActivationContext, Sprite, Transition, vec } from "excalibur";
 import { Resources } from "../resources";
 
 export class caseScene extends Scene {
     private objetoInteracao: any
-    elementoHTML?: HTMLElement
-    private textoDaCena?: string
+    private elementotexto?: HTMLElement
+    private actorEmpresa?: Actor
+    private listaImagens?: Sprite[]
+   
+    
     onTransition(direction: "in" | "out"): Transition | undefined {
         return new FadeInOut({
             direction: direction,
             color: Color.Black,
-            duration: 500
+            duration: 1000
         })
     }
 
     onInitialize(engine: Engine<any>): void {
-        this.backgroundColor = Color.Gray
+        this.backgroundColor = Color.Gray 
+        // Criar elemento com a descrição do case
+        this.elementotexto = document.createElement("div") as HTMLElement
+        this.elementotexto.classList.add("texto-case")
 
+        let containerGame = document.querySelector(".container-game")
+        containerGame?.appendChild(this.elementotexto)
+        // Ao pressionar ESC voltar para a exposição
+        this.input.keyboard.on("press", (event) => {
+            if (event.key == Keys.Esc) {
+                engine.goToScene("exposicao")
+            }
+        })
+
+        // Criar actor para receber a imagem
+        this.actorEmpresa = new Actor ({
+            pos: vec(engine.drawWidth - 300, engine.halfDrawHeight - 50)
+        })
+
+        // Carregar imagens
+        let backChar1 = Resources.backChar1.toSprite()
+        let backChar2 = Resources.backChar2.toSprite()
+        let backChar3 = Resources.backChar3.toSprite()
+
+        this.listaImagens = [backChar1, backChar2, backChar3]
     }
 
     onActivate(context: SceneActivationContext<unknown>): void {
-        // Pegar dados vinods da cena passa
+        // Receber os dados passados pela cena anterior
+        this.elementotexto!.style.opacity = "1"
         this.objetoInteracao = context.data
+        if (this.objetoInteracao.nomeDoActor == "mesa_stand_a") {
+            // Mesa A detectada
+            this.elementotexto!.innerHTML =`<h2> Case 1 </h2>
+            <p> Fizemos alguns trabalhos como ajudar escolas em seu desperdicio de alimentos na hora do almoço</p>  
+            `
+            // Inserir imagem
+            this.actorEmpresa?.graphics.add(this.listaImagens![0])
 
-        console.log(this.objetoInteracao);
-
-        // Se for mesa a
-        if (this.objetoInteracao.nomedoActor == "mesa_stand_a") {
-            this.textoDaCena = "Essa é a descrição do case A"
-            this.elementoHTML = document.createElement("div") as HTMLElement
-            this.elementoHTML.style.opacity = "1"
-
-            let containerGame = document.querySelector(".container-game")
-            containerGame?.appendChild(this.elementoHTML)
-
-            this.elementoHTML.innerHTML = `<h2>O que é gamificação?</h2>
-            <p>Gamificação é a aplicação de elementos típicos de jogos em contextos não lúdicos, com o objetivo de engajar e motivar indivíduos a atingir determinados objetivos. Esta abordagem se utiliza de componentes como pontuação, níveis, recompensas, desafios, e feedback imediato, visando promover comportamentos desejados e aumentar a participação e o comprometimento dos participantes.</p>`
-
-            this.elementoHTML.classList.add("gamificacao")
-
-            // Carregando imagem
-            let spriteLogoGamificaAi = Resources.LogoVertical.toSprite()
-            spriteLogoGamificaAi.scale = vec(0.7, 0.7)
-
-            // Criação do Actor para a imagem
-            let actorLogoGamificaAi = new Actor({
-                pos: vec(300, this.engine.halfDrawHeight)
-            })
-
-            actorLogoGamificaAi.graphics.add(spriteLogoGamificaAi)
-
-            this.add(actorLogoGamificaAi)
-
+            // Mudar zoom da imagem
+            this.actorEmpresa!.graphics.current!.scale = vec(1.5, 1.5)
         }
-        if (this.objetoInteracao.nomedoActor == "mesa_stand_b") {
-            this.textoDaCena = "Essa é a descrição do case B"
+
+
+
+        if (this.objetoInteracao.nomeDoActor == "mesa_stand_b") {
+            // Mesa B detectada
+           this.elementotexto!.innerHTML =  `<h2> Case 2</h2>
+            <p> Ajudamos uma escola com o problema de desperdício de comida dos alunos em suas refeições como almoço e janta.</p>
+            <p> Colocamos uma tabela ao lado da cantina para os alunos terem uma experiência que remetesse a uma competição em rankings.</p>    
+            <p> Nisso eles se sentiram mais motivados a consequentemente comerem melhor e não jogar comida fora.</p>    
+            `
+
+                    // Inserir imagem
+                    this.actorEmpresa?.graphics.add(this.listaImagens![1])
+
+                    // Mudar zoom da imagem
+                    this.actorEmpresa!.graphics.current!.scale = vec(1.5, 1.5)
         }
-        if (this.objetoInteracao.nomedoActor == "mesa_stand_c") {
-            this.textoDaCena = "Essa é a descrição do case C"
+
+
+
+        if (this.objetoInteracao.nomeDoActor == "mesa_stand_c") {
+            // Mesa C detectada
+            this.elementotexto!.innerHTML =`<h2> Vamo joga vava</h2>
+            <p> sim</p>  
+            `
+                    // Inserir imagem
+                    this.actorEmpresa?.graphics.add(this.listaImagens![2])
+
+                    // Mudar zoom da imagem
+                    this.actorEmpresa!.graphics.current!.scale = vec(1.5, 1.5)
         }
+
+        this.add(this.actorEmpresa!)
+    }
+
+    onDeactivate(context: SceneActivationContext<undefined>): void {
+        this.elementotexto!.style.opacity ="0"
     }
 }

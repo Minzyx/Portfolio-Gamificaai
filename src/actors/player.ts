@@ -250,16 +250,28 @@ export class Player extends Actor{
                 // Vai para a cena passando qual o objeto da interação
                 engine.goToScene("case", {
                     sceneActivationData: {
-                        nomedoActor: this.collider?.owner?.name
+                        nomeDoActor: this.ultimoColisor?.owner?.name
                         
                     }
                 })
             }
             if (this.ultimoColisor?.owner.name == "mesa_stand_b") {
                 console.log("Essa é mesa B");
+                engine.goToScene("case", {
+                    sceneActivationData: {
+                        nomeDoActor: this.ultimoColisor?.owner?.name
+                        
+                    }
+                })
             }
             if (this.ultimoColisor?.owner.name == "mesa_stand_c") {
                 console.log("Essa é mesa C");
+                engine.goToScene("case", {
+                    sceneActivationData: {
+                        nomeDoActor: this.ultimoColisor?.owner?.name
+                        
+                    }
+                })
             }
 
             }
